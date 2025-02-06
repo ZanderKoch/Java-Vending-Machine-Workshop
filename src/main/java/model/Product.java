@@ -1,15 +1,13 @@
 package model;
 
 
-
 abstract class Product {
     private static int idCounter = 0;
     private final int id;
-    private double price;
-    private String productName;
+    private final double price;
+    private final String productName;
 
-
-    public Product(String productName, double price){
+    public Product(String productName, double price) {
         this.productName = productName;
         this.price = price;
         this.id = ++idCounter;
@@ -28,5 +26,6 @@ abstract class Product {
     }
 
     abstract String use();
+
     abstract String examine();
 }
